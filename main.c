@@ -6,4 +6,11 @@ int main()  {
     printf("Enter Total Process:\t ");
     scanf("%d",&n);
     remain=n;
+    
+    for(count=0;count<n;count++)    {
+        printf("Enter Arrival Time and Burst Time for Process Process Number %d :",count+1);
+        scanf("%d",&at[count]);
+        scanf("%d",&bt[count]);
+        rt[count]=bt[count];
+    }
 }
