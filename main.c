@@ -13,7 +13,9 @@ int main()  {
         scanf("%d",&bt[count]);
         rt[count]=bt[count];
     }
-    
+    printf("Enter Time Quantum:\t");
+    scanf("%d",&time_quantum);
+    printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n");
     for(time=0,count=0;remain!=0;)    {
         if(rt[count]<=time_quantum && rt[count]>0)      {
             time+=rt[count];
@@ -42,4 +44,7 @@ int main()  {
             count=0;
         }
     }
+    printf("\nAverage Waiting Time= %f\n",wait_time*1.0/n);
+        printf("Avg Turnaround Time = %f",turnaround_time*1.0/n);
+        return 0;
 }
